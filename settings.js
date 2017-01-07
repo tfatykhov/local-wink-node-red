@@ -161,22 +161,17 @@ var settings = module.exports = {
     //    context.global.os
     functionGlobalContext: {
 //	scanner:require('chromecast-scanner'),
-        wnr : require("winknodered")
+	     wnr : require("winknodered")
 	    ,CRYPTO: require("crypto")
 	    ,SunCalc : require("suncalc")
 	    ,wnr : require("winknodered")
 	    ,tinycolor : require("tinycolor2")
-        // os:require('os'),
-        // bonescript:require('bonescript'),
-        // jfive:require("johnny-five"),
-        // j5board:require("johnny-five").Board({repl:false})
-	,WinkUser: {"uid":"XXX","pwd":"XXX"},
-	BlueMixUrlBase: "XXX",
-	forecastIoApiKey: "5XXX",
-	FREEBOARD_TOKEN: "XXX",
-	FreeboardAuthTocken: "XXX",
-	IFTTT_TOKEN: "XXX",
-	HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"}
+	    ,WinkUser: {"uid":"XXX","pwd":"XXX"}
+	    ,BlueMixUrlBase: "XXX"
+	    ,forecastIoApiKey: "5XXX"
+	    ,FREEBOARD_TOKEN: "XXX"
+	    ,IFTTT_TOKEN: "XXX"
+	    ,HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"}
     },
 
     // The following property can be used to order the categories in the editor
