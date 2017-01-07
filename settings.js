@@ -177,8 +177,7 @@ module.exports = {
 	FREEBOARD_TOKEN: "XXX",
 	FreeboardAuthTocken: "XXX",
 	IFTTT_TOKEN: "XXX",
-	HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"},
-
+	HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"}
     },
 
     // The following property can be used to order the categories in the editor
