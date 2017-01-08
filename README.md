@@ -16,25 +16,25 @@ This should install all required dependencies.
 3. Navigate to node_modules/local-wink-node-red and edit settings.js file. Replace XXX with your actual values
 - These are user name/password for node-red flow editor
       
-      var NODE_RED_USERNAME="XXXXX";
-      
-      var NODE_RED_PASSWORD="XXXXX";
+            var NODE_RED_USERNAME="XXXXX";
+
+            var NODE_RED_PASSWORD="XXXXX";
 
 - this is your externally avaliable DNS resolvable host name and port ex - http://external_name:externalport
        
-       BlueMixUrlBase: "XXX",  
+            BlueMixUrlBase: "XXX",  
        
 - this is forecast.io (darksky.io) key
        
-       forecastIoApiKey: "5XXX", 
+            forecastIoApiKey: "5XXX", 
        
 - this is randomly generated string that you need to create, you can use https://www.random.org/strings/         
        
-       FREEBOARD_TOKEN: "XXX", 
+            FREEBOARD_TOKEN: "XXX", 
        
 - this is ifttt maker channel key.       
         
-        IFTTT_TOKEN: "XXX", 
+            IFTTT_TOKEN: "XXX", 
         
 Once this is done you can start your node-red by running npm start.
 
