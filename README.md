@@ -60,14 +60,14 @@ All these are same certificate in different formats.
 You need file with p7b extension and you need to covert it to a .pem format.
 In order to do that copy that file as well as your .key file to node_modules/local-wink-node-red folder and then run following command:
 
-    openssl pkcs7 -print_certs -in your_cert_name.p7b -out your_cer_name.pem
+    openssl pkcs7 -print_certs -in xxxx.p7b -out xxxx.pem
 
 once it's complete you will get a xxx.pem file. You need .key and .pem files to make node-red run via https.
 in order to do that you need to stop node-red, edit settings.js file, uncomment following section (delete //) and set proper file names:
 
        https: {
-            key: fs.readFileSync('xxx.key'),
-            cert: fs.readFileSync('xxx.pem')
+            key: fs.readFileSync('xxxx.key'),
+            cert: fs.readFileSync('xxxx.pem')
        },
 
 after that you need to change your bluemixUrlBase and make it https:// instead of http://
