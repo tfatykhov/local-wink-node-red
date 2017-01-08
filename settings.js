@@ -75,13 +75,13 @@ var settings = module.exports = {
     // By default, the Node-RED UI is available at http://localhost:1880/
     // The following property can be used to specifiy a different root path.
     // If set to false, this is disabled.
-    //httpAdminRoot: '/admin',
+    httpAdminRoot: '/red',
 
     // Some nodes, such as HTTP In, can be used to listen for incoming http requests.
     // By default, these are served relative to '/'. The following property
     // can be used to specifiy a different root path. If set to false, this is
     // disabled.
-    //httpNodeRoot: '/red-nodes',
+    //httpNodeRoot: '/red',
 
     // The following property can be used in place of 'httpAdminRoot' and 'httpNodeRoot',
     // to apply the same root to both parts.
@@ -90,7 +90,7 @@ var settings = module.exports = {
     // When httpAdminRoot is used to move the UI to a different root path, the
     // following property can be used to identify a directory of static content
     // that should be served at http://localhost:1880/.
-    //httpStatic: '/home/nol/node-red-dashboard/',
+    httpStatic: 'public',
 
     // Securing Node-RED
     // -----------------
@@ -161,17 +161,22 @@ var settings = module.exports = {
     //    context.global.os
     functionGlobalContext: {
 //	scanner:require('chromecast-scanner'),
-	     wnr : require("winknodered")
+        wnr : require("winknodered")
 	    ,CRYPTO: require("crypto")
 	    ,SunCalc : require("suncalc")
 	    ,wnr : require("winknodered")
 	    ,tinycolor : require("tinycolor2")
-	    ,WinkUser: {"uid":"XXX","pwd":"XXX"}
-	    ,BlueMixUrlBase: "XXX"
-	    ,forecastIoApiKey: "5XXX"
-	    ,FREEBOARD_TOKEN: "XXX"
-	    ,IFTTT_TOKEN: "XXX"
-	    ,HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"}
+        // os:require('os'),
+        // bonescript:require('bonescript'),
+        // jfive:require("johnny-five"),
+        // j5board:require("johnny-five").Board({repl:false})
+	,WinkUser: {"uid":"XXX","pwd":"XXX"},
+	BlueMixUrlBase: "XXX",
+	forecastIoApiKey: "5XXX",
+	FREEBOARD_TOKEN: "XXX",
+	FreeboardAuthTocken: "XXX",
+	IFTTT_TOKEN: "XXX",
+	HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"}
     },
 
     // The following property can be used to order the categories in the editor
@@ -191,7 +196,7 @@ var settings = module.exports = {
             // info - record information about the general running of the application + warn + error + fatal errors
             // debug - record information which is more verbose than info + info + warn + error + fatal errors
             // trace - record very detailed logging + debug + info + warn + error + fatal errors
-            level: "info",
+            level: "debug",
 
             // Whether or not to include metric events in the log output
             metrics: false,
