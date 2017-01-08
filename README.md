@@ -15,8 +15,9 @@ This should install all required dependencies.
 
 3. Navigate to node_modules/local-wink-node-red and edit settings.js file. Replace XXX with your actual values
 These are user name/password for node-red flow editor
-        var NODE_RED_USERNAME="XXXXX";
-        var NODE_RED_PASSWORD="XXXXX";
+
+                var NODE_RED_USERNAME="XXXXX"
+                var NODE_RED_PASSWORD="XXXXX"
 
 
         BlueMixUrlBase: "XXX",  - this is your externally avaliable DNS resolvable host name and port ex - http://external_name:externalport
