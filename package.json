@@ -8,7 +8,7 @@
         "feedparser":"~0.19.2",
      	"redis":"~0.10.1",
 	"crypto": "^0.0.3",
-	"node-red": "^0.15",
+	"node-red": ">0.15.0",
 	"path": "^0.12.7",
         "suncalc":"git://github.com/mourner/suncalc.git",
         "winknodered":"git://github.com/tfatykhov/WinkRedNode.git#master",
