@@ -9,7 +9,8 @@ This repository is an modified  Node-RED application that can be deployed locall
 1. Install Node.JS version 4 from https://nodejs.org/download/release/v4.7.2/ (you can try it with latest version as well but I did not test it)
 
 2. run following command to install proper version of node
-* npm install local-wink-node-red@https://github.com/tfatykhov/local-wink-node-red.git
+
+            npm install local-wink-node-red@https://github.com/tfatykhov/local-wink-node-red.git
 
 This should install all required dependencies.
 
@@ -72,15 +73,15 @@ All these are same certificate in different formats.
 You need file with p7b extension and you need to covert it to a .pem format.
 In order to do that copy that file as well as your .key file to node_modules/local-wink-node-red folder and then run following command:
 
-    openssl pkcs7 -print_certs -in xxxx.p7b -out xxxx.pem
+            openssl pkcs7 -print_certs -in xxxx.p7b -out xxxx.pem
 
 once it's complete you will get a xxx.pem file. You need .key and .pem files to make node-red run via https.
 in order to do that you need to stop node-red, edit settings.js file, uncomment following section (delete //) and set proper file names:
 
-       https: {
-            key: fs.readFileSync('xxxx.key'),
-            cert: fs.readFileSync('xxxx.pem')
-       },
+             https: {
+                  key: fs.readFileSync('xxxx.key'),
+                  cert: fs.readFileSync('xxxx.pem')
+             },
 
 after that you need to change your bluemixUrlBase and make it https:// instead of http://
 Start node-red again.
