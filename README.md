@@ -26,7 +26,7 @@ This should install all required dependencies.
        
 - this is forecast.io (darksky.io) key
        
-            forecastIoApiKey: "5XXX", 
+            forecastIoApiKey: "XXX", 
        
 - this is randomly generated string that you need to create, you can use https://www.random.org/strings/         
        
