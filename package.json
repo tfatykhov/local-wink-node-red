@@ -10,6 +10,7 @@
 	"crypto": "^0.0.3",
 	"node-red": ">0.15.0",
 	"path": "^0.12.7",
+	"node-red-contrib-freeboard":"git://github.com/tfatykhov/node-red-contrib-freeboard.git",	    
         "suncalc":"git://github.com/mourner/suncalc.git",
         "winknodered":"git://github.com/tfatykhov/WinkRedNode.git#master",
  	"tinycolor2":"git://github.com/bgrins/TinyColor.git" ,
