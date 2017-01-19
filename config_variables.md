@@ -48,16 +48,15 @@ you can add it to the same place in settings.js file locally where you can see i
           "holiday_light_mode": "random",
           "holiday_keep_color": "10",
           "holiday_light_bulbs": [
-            "Patio colors",
-            "Lower patio",
-            "Living room floor"
+            "color bulb1",
+            "color bulb2"
           ],
           "holiday_mode_group": false,
           "holiday_light_mode2": "orange",
           "holiday_keep_color2": "15",
           "holiday_light_bulbs2": [
-            "LivingColors left",
-            "LivingColors right"
+            "color bulb3",
+            "color bulb4"
           ],
           "holiday_mode_group2": false,
           "holiday_light_mode3": "random",
