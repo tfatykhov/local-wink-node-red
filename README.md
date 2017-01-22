@@ -76,11 +76,11 @@ In order to do that copy that file as well as your .key file to node_modules/loc
             openssl pkcs7 -print_certs -in xxxx.p7b -out xxxx.pem
 
 once it's complete you will get a xxx.pem file. You need .key and .pem files to make node-red run via https.
-in order to do that you need to stop node-red, edit settings.js file, uncomment following section (delete //) and set proper file names:
+in order to do that you need to stop node-red, edit settings.js file, uncomment following section (delete //) and set proper file names and paths(assuming that pi is your user id and you installed local-wink-node-red from its home directory:
 
              https: {
-                  key: fs.readFileSync('xxxx.key'),
-                  cert: fs.readFileSync('xxxx.pem')
+                  key: fs.readFileSync('/home/pi/node_modules/local-wink-node-red/xxxx.key'),
+                  cert: fs.readFileSync('/home/pi/node_modules/local-wink-node-red/xxxx.pem')
              },
 
 after that you need to change your bluemixUrlBase and make it https:// instead of http://
