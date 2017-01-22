@@ -59,6 +59,8 @@ For linux - openSSL should be already installed as part of the system
 Follow instructions provided on the site to generate your private key using Open SSL:
 http://helpdesk.ssls.com/hc/en-us/articles/203427502-How-to-generate-a-CSR-code-on-Apache-Nginx-using-OpenSSL (now you can generate your key)
 
+##### Keep your key file somewhere you can find it as you will use it later during node-red configuration. Do not delete!
+
 Once you do that and submit your private key, you will be asked to verify that you actually own a web site. There will be multiple options provided. make sure you select one that allows you to verify your website by putting
 a specific file to the web site root. You will get a file with some random string inside. Once you have it - stop your node-red instance, copy the file to the "node_modules/local-wink-node-red/public" folder and start node-red again.
 It will take some time for certificate authority to verify your web site. Make sure it is accessible from outside your firewall router.
