@@ -37,9 +37,9 @@ docker run -d -p 5984:5984 -v /home/pirate/couchDB:/opt/couchdb/data -e COUCHDB_
 ```
 docker run -it -p 1880:1880 -v /home/pirate/settings:/settings -v /home/pirate/flows:/flows --restart always --name wnr tfatykhov/winknodered:rpi
 ```
-* <b>Important</b>: if you already have node-red running on same pi, change the external port to 1990 (or any other one) for docker WNR container
+* <b>Important</b>: if you already have node-red running on same pi, change the external port to 1990 (or any other one) for docker WNR container example below:
 ```
-docker run -it -p <b>1990:1880</b> -v /home/pirate/settings:/settings -v /home/pirate/flows:/flows --restart always --name wnr tfatykhov/winknodered:rpi
+docker run -it -p 1990:1880 -v /home/pirate/settings:/settings -v /home/pirate/flows:/flows --restart always --name wnr tfatykhov/winknodered:rpi
 ```
 you should see node red starting etc. you can then press <b>CtrlP</b> then <b>CtrlQ</b> to detach current terminal and let it run on background
 
