@@ -10,15 +10,15 @@ Also my assumtion is that you know how to copy files to unix box or how to creat
 1. login to rasperry pi as user pirate
     Optional but makes things easier: install portainer.io GUI for docker by running following command:<br>
 	`docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --no-auth --restart always`<br>
-	once completed, open your browser and navigate to http://your_rpi_ip_address:9000 . 
-	you should see portainer.io UI
+    once completed, open your browser and navigate to http://your_rpi_ip_address:9000 . 
+    you should see portainer.io UI
 2. navigate to home directory cd /home/pirate
 3. create a folder where you will keep settings.js and name it "settings"<br>
-        `mkdir settings`
+        >mkdir settings
 4. create a folder where you will keep your node red flows and name it "flows"<br>
-        `mkdir flows`
+        >mkdir flows
 5. create a folder where you will keep your couchDB database and name it "couchDB"<br>
-        `mkdir couchDB`
+        >mkdir couchDB
 6. get settings.js from https://github.com/tfatykhov/local-wink-node-red/blob/master/docker/settings.js and copy settings.js (after you put your details) to /home/pirate/settings folder. 
 	You can copy some stuff from your current settings.js but make sure you do not overwrite things as there are some changes.
 7. execute following command to install couch DB<br>
