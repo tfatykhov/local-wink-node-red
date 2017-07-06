@@ -13,11 +13,11 @@ Also my assumtion is that you know how to copy files to unix box or how to creat
 	once completed, open your browser and navigate to http://your_rpi_ip_address:9000 . 
 	you should see portainer.io UI
 2. navigate to home directory cd /home/pirate
-3. create a folder where you will keep settings.js and name it "settings"
+3. create a folder where you will keep settings.js and name it "settings"<br>
         `mkdir settings`
-4. create a folder where you will keep your node red flows and name it "flows"
+4. create a folder where you will keep your node red flows and name it "flows"<br>
         `mkdir flows`
-5. create a folder where you will keep your couchDB database and name it "couchDB"
+5. create a folder where you will keep your couchDB database and name it "couchDB"<br>
         `mkdir couchDB`
 5  get settings.js from https://github.com/tfatykhov/local-wink-node-red/blob/master/docker/settings.js and copy settings.js (after you put your details) to /home/pirate/settings folder. 
 	You can copy some stuff from your current settings.js but make sure you do not overwrite things as there are some changes.
