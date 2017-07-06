@@ -150,7 +150,7 @@ var settings = module.exports = {
 	    ,SunCalc : require("../usr/src/node-red/node_modules/suncalc")
 	    ,tinycolor : require("../usr/src/node-red/node_modules/tinycolor2")
 	    ,WinkUser: {"uid":"XXX","pwd":"XXX"}
-	  ,BlueMixUrlBase: "XXX"
+	  ,BlueMixUrlBase: "XXX" // put http://your_rpi_ip:1880 
 	  ,forecastIoApiKey: "5XXX"
 	  ,FREEBOARD_TOKEN: "XXX"
 	  ,IFTTT_TOKEN: "XXX"
@@ -158,7 +158,7 @@ var settings = module.exports = {
     	VCAP_SERVICES: { "cloudantNoSQLDB":
             [
               {
-               "credentials": { "url":"http://wnr:wnr@192.168.1.113:5984" }
+               "credentials": { "url":"http://wnr:wnr@XXX.XXX.XXX.XXX:5984" } //put your docker rpi ip address
               }
             ]
         },
