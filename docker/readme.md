@@ -37,7 +37,7 @@ docker run -d -p 5984:5984 -v /home/pirate/couchDB:/opt/couchdb/data -e COUCHDB_
 ```
 docker run -it -p 1880:1880 -v /home/pirate/settings:/settings -v /home/pirate/flows:/flows --restart always --name wnr tfatykhov/winknodered:rpi
 ```
-	you should see node red starting etc. you can then press <b>CtrlP</b> then <b>CtrlQ</b> to detach current terminal and let it run on background
+you should see node red starting etc. you can then press <b>CtrlP</b> then <b>CtrlQ</b> to detach current terminal and let it run on background
 
 9. once everyting is done, you can open http://your_docker_server_ip:1880/red and import your flows. 
 	IMPORTANT!! - if you already have working WNR (locally or in bluemix) before deploying winkCore flow - disable "wink subscriptions" since your docker instance is not exposed outside by default
