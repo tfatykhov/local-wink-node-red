@@ -51,3 +51,22 @@ you should see node red starting etc. you can then press <b>CtrlP</b> then <b>Ct
 11. In order to start WNR you should execute: `docker start wnr`
 12. To access your couchDB navigate to http://<docker_ip>:5984/_utils. user id/password to access - wnr/wnr
 13. Every time you change settings.js - you need to stop WNR and start WNR (pp. 11 and 12)
+
+### Adding https support
+
+#### Assumtion is that you already have certificate generated (.key and .pem files)
+
+1. Copy your .key and .pem files to /home/pirate/settings folder (the one you prepaired earlier)
+2. modify settings.js, uncomment lines for https and replace values based on sample below repacing your_file_name with actual name of corresponding file:
+```
+   https: {
+        key: fs.readFileSync('/settings/your_file_name.key'),
+        cert: fs.readFileSync('/settings/your_file_name.pem')
+   },
+```
+3. create port forwarding rule on your router using port number from item 8 and your docker host ip address
+4. change settings.js and modify BlueMixUrlBase to https://your_external_domain:your_configured_port
+5. <b>Important</b>. Since this instace also use coachDB, before restarting WNR, navigate to configuration tab of ui 1.0 and change BlueMix Url Base there as well or application will not function properly.
+6. restart wnr docker container by running commands from pp 10 and  11 of previous section.
+7. now open your node red using https://your_external_domain:your_port/red
+
