@@ -1,0 +1,46 @@
+{
+    "name" : "winknodered-docker",
+    "version": "1.0.0",
+    "description": "modified node-red to support WNR project",
+    "homepage": "https://github.com/tfatykhov/WinkRedNode",
+    "license": "Apache 2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tfatykhov/node-red-docker.git"
+    },
+    "main": "node_modules/node-red/red/red.js",
+    "scripts": {
+        "start": "node $NODE_OPTIONS node_modules/node-red/red.js -v $FLOWS"
+    },
+    "contributors": [
+        {
+       	    "name": "Timur Fatykhov"
+        }
+    ],
+    "dependencies": {
+        "when": "~3.x",
+        "mongodb": "~1.4.x",
+        "nano": "~5.11.0",
+        "cfenv":"~1.0.0",
+        "feedparser":"~0.19.2",
+        "redis":"~0.10.1",
+        "node-red": "0.17.3",
+        "node-red-node-msgpack": "*",
+        "node-red-node-base64": "*",
+        "node-red-node-suncalc": "*",
+        "node-red-node-random": "*",
+        "node-red-contrib-freeboard":"git://github.com/tfatykhov/node-red-contrib-freeboard.git",
+        "node-red-node-pushbullet":"0.x",
+        "node-red-contrib-later":"~0.x",
+        "node-red-contrib-async":"~0.x",
+        "node-red-contrib-github":"~0.x",
+        "suncalc":"git://github.com/mourner/suncalc.git",
+        "winknodered":"git://github.com/tfatykhov/WinkRedNode.git",
+        "wnr-ui" : "git://github.com/tfatykhov/wnrUI.git",        
+	"tinycolor2":"~1.x",
+	"crypto":"^0.0.3"
+    },
+    "engines": {
+        "node": "~4.x"
+    }
+}
