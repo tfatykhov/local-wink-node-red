@@ -49,4 +49,5 @@ you should see node red starting etc. you can then press <b>CtrlP</b> then <b>Ct
 	then you can deploy everything.
 10. In order to stop WNR you should execute: `docker stop wnr`
 11. In order to start WNR you should execute: `docker start wnr`
-12. To access your couchDB navivate to http://<docker_ip>:5984/_utils. user id/password to access - wnr/wnr
+12. To access your couchDB navigate to http://<docker_ip>:5984/_utils. user id/password to access - wnr/wnr
+13. Every time you change settings.js - you need to stop WNR and start WNR (pp. 11 and 12)
