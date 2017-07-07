@@ -7,8 +7,9 @@ This repository is an modified  Node-RED application that can be deployed locall
 
 
 #### Update: Docker Image for Wink Node Red is avaliable now and it works wit couchDB as local storage!
-* Please find installation steps on raspberry pi 2/3  [here](docker/readme.md)
-* You can also use Dockerfile and package.json from [latest](/docker/latest) to generate generic docker container image for standard linux/windows host.
+* Please find installation steps for raspberry pi 2/3  [here](docker/readme.md)
+* You can also use Dockerfile and package.json from [latest](/docker/latest) to generate generic docker container image for standard linux/windows host. Once you create your local container image use it instead during installation process. You will also need to use generic couchDB container (https://hub.docker.com/_/couchdb/)
+
 * You also can use Dockerfile and package.json from [rpi](/docker/rpi) to generate Raspberry Pi specific container image in case you need to add more dependencies
 
 
