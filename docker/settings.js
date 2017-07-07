@@ -155,13 +155,13 @@ var settings = module.exports = {
 	  ,FREEBOARD_TOKEN: "XXX"
 	  ,IFTTT_TOKEN: "XXX"
 	  ,HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"}
-    	VCAP_SERVICES: { "cloudantNoSQLDB":
+    	  ,VCAP_SERVICES: { "cloudantNoSQLDB":
             [
               {
                "credentials": { "url":"http://wnr:wnr@XXX.XXX.XXX.XXX:5984" } //put your docker rpi ip address
               }
             ]
-        },
+        }
     }
 
     // The following property can be used to order the categories in the editor
