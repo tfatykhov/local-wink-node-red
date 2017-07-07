@@ -5,7 +5,14 @@ Wink Node-RED Local Starter Application
 This repository is an modified  Node-RED application that can be deployed locally to use with Wink Node Red flows
 
 
+
+
 #### Installation:
+
+#### Docker installation steps:
+[here](docker/readme.md)
+
+
 1. Install Node.JS version 4 from https://nodejs.org/download/release/v4.7.2/ (you can try it with latest version as well but I did not test it)
 
 2. run following command to install proper version of node
