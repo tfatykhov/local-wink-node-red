@@ -17,6 +17,8 @@
 // The `https` setting requires the `fs` module. Uncomment the following
 // to make it available:
 //var fs = require("fs");
+
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 var fs = require("fs");
 var path = require("path");
 var NODE_RED_USERNAME="XXXXX";
