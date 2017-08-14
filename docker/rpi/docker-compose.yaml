@@ -8,7 +8,6 @@ services:
       - <your path for influxDb>:/data
     ports:
       - "8086:8086"
-      - "8083:8083"
     environment:
       INFLUXDB_GRAPHITE_ENABLED: 'true'
       INFLUXDB_REPORTING_DISABLED: 'true'
