@@ -5,8 +5,8 @@ services:
     image: hypriot/rpi-influxdb:latest
     restart: always
     volumes:
-      - /mnt/picluster/influxdb:/data
-      -/mnt/picluster/influxdb/config:/etc/infuxdb
+      - <your path for influxDb>:/data
+      - <your path for influxDb config>:/etc/infuxdb
     ports:
       - "8086:8086"
       - "8083:8083"
@@ -21,11 +21,11 @@ services:
     links:
       - influxdb
     volumes:
-      - /mnt/picluster/grafana/log:/var/log/grafana
-      - /mnt/picluster/grafana/data:/var/lib/grafana
+      - <your path for grafana>/log:/var/log/grafana
+      - <your path for grafana>/data:/var/lib/grafana
       - /etc/localtime:/etc/localtime:ro
     ports:
       - "3000:3000"
     environment:
       # the login for the web-interface on port 3000 will be admin/secret
-      GF_SECURITY_ADMIN_PASSWORD: 'Dfdbkjy-5'
+      GF_SECURITY_ADMIN_PASSWORD: '<your grafaba admin passwd>'
