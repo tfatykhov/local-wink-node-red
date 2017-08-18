@@ -1,13 +1,15 @@
-version: '1.0'
+version: '2.1'
 
 services:
   influxdb:
     image: hypriot/rpi-influxdb:latest
     restart: always
     volumes:
-      - <your path for influxDb>:/data
+      - /mnt/picluster/influxdb:/data
+      -/mnt/picluster/influxdb/config:/etc/infuxdb
     ports:
       - "8086:8086"
+      - "8083:8083"
     environment:
       INFLUXDB_GRAPHITE_ENABLED: 'true'
       INFLUXDB_REPORTING_DISABLED: 'true'
@@ -19,11 +21,12 @@ services:
     links:
       - influxdb
     volumes:
-      - <your path for grafana>/log:/var/log/grafana
-      - <your path for grafana>/data:/var/lib/grafana
+      - /mnt/picluster/grafana/log:/var/log/grafana
+      - /mnt/picluster/grafana/data:/var/lib/grafana
       - /etc/localtime:/etc/localtime:ro
     ports:
       - "3000:3000"
     environment:
       # the login for the web-interface on port 3000 will be admin/secret
-      GF_SECURITY_ADMIN_PASSWORD: '<your grafaba admin passwd>'
+      GF_SECURITY_ADMIN_PASSWORD: 'Dfdbkjy-5'
+      GF_INSTALL_PLUGINS: 'grafana-worldmap-panel,grafana-piechart-panel,briangann-gauge-panel,natel-discrete-panel,natel-influx-admin-panel,briangann-datatable-panel'
