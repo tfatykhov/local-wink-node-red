@@ -72,3 +72,12 @@ a187de3ada6a        fg2it/grafana-armhf:v4.3.2      "/run.sh"                24 
 <img src='img/world_map1.png'/>
 
 <img src='img/world_map21.png'/>
+
+### Start/Stop both services:
+From /home/pirate execute docker-compose stop or docker-compose start
+
+### removing both services:
+From /home/pirate execute docker-compose rm
+
+
+
