@@ -20,7 +20,7 @@ mkdir influxdb
 mkdir influxdb/data
 mkdir influxdb/config
 ```
-6. get docker-compose.yaml from https://github.com/tfatykhov/local-wink-node-red/blob/master/docker/docker-compose.yaml , update it in case your userid or folders are different from what we did in step 3 and copy it (after you put your details) to /home/pirate folder. 
+6. get docker-compose.yaml from [docker-compose.yaml](docker-compose.yaml) , update it in case your userid or folders are different from what we did in step 3 and copy it (after you put your details) to /home/pirate folder. 
 
 7. execute following command to install grafana and influx db in one step from /home/pirate folder of your raspberry pi box<br>
 ```
