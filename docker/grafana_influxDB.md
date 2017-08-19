@@ -1,4 +1,4 @@
-## Deploying WinkNodeRed and couchDB as docker containers on raspberry pi.
+## Deploying Grafana and InfluxDB servers as docker containers on raspberry pi using docker orchestrate script.
 
 #### This documentation assumes that you already have docker installed. I recoommend to use Hypriot OS (https://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/)
 #### Also, this documentation shows how to use host local folders for persistence. You can mount a NFS/CIFS/ISCSI file system to your host and use that instead. There are plenty resources on how to mount NAS storage on the internet.
