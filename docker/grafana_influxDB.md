@@ -60,10 +60,11 @@ a187de3ada6a        fg2it/grafana-armhf:v4.3.2      "/run.sh"                24 
 
 17. After that, you should navigate to general tab so you can put proper header, then Axes where you can select proper units and labels for you axes, etc. More information is avaliable [here](http://docs.grafana.org/features/panels/graph/).
 
-18. Once you do that, you should close graph settings and see your dashboard. Once you done, click on "save" icon so you dashboard will be saved.
+18. Once you do that, you should close graph settings and see your dashboard. Once you done, click on "save" icon so you dashboard will be saved. Notes:On main dashboard clicking on devide name will filter panel just for that device. on graph panel, clicking on color lable of devide will open menu where you can change color and assign axis (y1, y2) for that specific device. This is helpfull if you want to show different measurments on single graph panel, like temperature and humidity, etc.
 <img src='img/grafana_4.png'/>
 
-19. There are several different panels that you can use so please experiment and get information about panels [here](http://docs.grafana.org/)
+
+19. There are several different panels that you can use so please experiment and get information about panels [here](http://docs.grafana.org/). 
 
 20. Only thing that is bit unclear - how to use world map panel with owntracks data. I am still looking into proper way of storing data so it can be used with this panel but for now please use configuration from images below. it will show you locations of each gps sensor with name and accuracy on mouse over.
 <img src='img/world_map1.png'/>
