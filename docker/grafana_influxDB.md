@@ -68,4 +68,4 @@ a187de3ada6a        fg2it/grafana-armhf:v4.3.2      "/run.sh"                24 
 20. Only thing that is bit unclear - how to use world map panel with owntracks data. I am still looking into proper way of storing data so it can be used with this panel but for now please use configuration from images below. it will show you locations of each gps sensor with name and accuracy on mouse over.
 <img src='img/world_map1.png'/>
 
-<img src='img/world_map2.png'/>
+<img src='img/world_map21.png'/>
