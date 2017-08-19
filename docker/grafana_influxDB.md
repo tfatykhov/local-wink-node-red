@@ -61,7 +61,7 @@ a187de3ada6a        fg2it/grafana-armhf:v4.3.2      "/run.sh"                24 
 17. After that, you should navigate to general tab so you can put proper header, then Axes where you can select proper units and labels for you axes, etc. More information is avaliable [here](http://docs.grafana.org/features/panels/graph/).
 
 18. Once you do that, you should close graph settings and see your dashboard. Once you done, click on "save" icon so you dashboard will be saved. 
-    Notes: [i]On main dashboard clicking on device name will filter panel just for that device. on graph panel, clicking on color label of devide will open menu where you can change color and assign axis (y1, y2) for that specific device. This is helpfull if you want to show different measurments on single graph panel, like temperature and humidity, etc.[/i]
+    <b>Notes</b>: <i> On main dashboard clicking on device name will filter panel just for that device. on graph panel, clicking on color label of devide will open menu where you can change color and assign axis (y1, y2) for that specific device. This is helpfull if you want to show different measurments on single graph panel, like temperature and humidity, etc. </i>
 <img src='img/grafana_4.png'/>
 
 
