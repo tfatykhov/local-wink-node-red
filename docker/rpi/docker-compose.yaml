@@ -1,8 +1,8 @@
-version: '2.1'
+version: '2.1' 
 
 services:
   influxdb:
-    image: hypriot/rpi-influxdb:latest
+    image: tfatykhov/rpi-influxdb:latest
     restart: always
     volumes:
       - /home/pirate/influxdb/data:/data
@@ -12,6 +12,8 @@ services:
     environment:
       INFLUXDB_GRAPHITE_ENABLED: 'true'
       INFLUXDB_REPORTING_DISABLED: 'true'
+      ADMIN_USER: 'wnr'
+      INFLUXDB_INIT_PWD: 'wnr'
   grafana:
     image: fg2it/grafana-armhf:v4.3.2
     restart: always
