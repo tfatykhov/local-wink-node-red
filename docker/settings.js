@@ -117,11 +117,11 @@ var settings = module.exports = {
     //    context.global.os
     functionGlobalContext: {
 	env: process.env
-        ,wnr : require("winknodered")
+        ,wnr : require("../usr/src/node-red/node_modules/winknodered")
 	,CRYPTO: require("crypto")
-	,SunCalc : require("suncalc")
-	,tinycolor : require("tinycolor2")
-	,WinkUser: {"uid":"XXX","pwd":"XXX"}
+        ,SunCalc : require("../usr/src/node-red/node_modules/suncalc")
+        ,tinycolor : require("../usr/src/node-red/node_modules/tinycolor2")
+        ,WinkUser: {"uid":"XXX","pwd":"XXX"}
 	,BlueMixUrlBase: "XXX"
 	,forecastIoApiKey: "XXX"
 	,FREEBOARD_TOKEN: "XXX"
