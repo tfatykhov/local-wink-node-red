@@ -162,26 +162,19 @@ var settings = module.exports = {
     // can be accessed in a function block as:
     //    context.global.os
     functionGlobalContext: {
-        wnr : require("winknodered")
-	    ,CRYPTO: require("crypto")
-	    ,SunCalc : require("suncalc")
-	    ,wnr : require("winknodered")
-	    ,tinycolor : require("tinycolor2")
-	,WinkUser: {"uid":"XXX","pwd":"XXX"},
-	BlueMixUrlBase: "XXX",
-	forecastIoApiKey: "5XXX",
-	FREEBOARD_TOKEN: "XXX",
-	IFTTT_TOKEN: "XXX",
-	HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"}
+	env: process.env
+        ,wnr : require("winknodered")
+	,CRYPTO: require("crypto")
+	,SunCalc : require("suncalc")
+	,tinycolor : require("tinycolor2")
+	,WinkUser: {"uid":"XXX","pwd":"XXX"}
+	,BlueMixUrlBase: "XXX"
+	,forecastIoApiKey: "XXX"
+	,FREEBOARD_TOKEN: "XXX"
+	,IFTTT_TOKEN: "XXX"
+	,HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"}
     },
 
-    // The following property can be used to order the categories in the editor
-    // palette. If a node's category is not in the list, the category will get
-    // added to the end of the palette.
-    // If not set, the following default order is used:
-    //paletteCategories: ['subflows', 'input', 'output', 'function', 'social', 'mobile', 'storage', 'analysis', 'advanced'],
-
-    // Configure the logging output
     logging: {
         // Only console logging is currently supported
         console: {
