@@ -17,9 +17,6 @@ var settings = module.exports = {
     } } },
 
 
-    // By default, the Node-RED UI accepts connections on all IPv4 interfaces.
-    // The following property can be used to listen on a specific interface. For
-    // example, the following would only allow connections from the local machine.
     //uiHost: "127.0.0.1",
 
     // Retry time in milliseconds for MQTT connections
@@ -47,7 +44,7 @@ var settings = module.exports = {
 
     // To enabled pretty-printing of the flow within the flow file, set the following
     //  property to true:
-    //flowFilePretty: true,
+    flowFilePretty: true,
 
     // By default, all user data is stored in the Node-RED install directory. To
     // use a different location, the following property can be used
@@ -77,32 +74,6 @@ var settings = module.exports = {
     // that should be served at http://localhost:1880/.
     //httpStatic: 'public',
 
-    // Securing Node-RED
-    // -----------------
-    // To password protect the Node-RED editor and admin API, the following
-    // property can be used. See http://nodered.org/docs/security.html for details.
-    //adminAuth: {
-    //    type: "credentials",
-    //    users: [{
-    //        username: "admin",
-    //        password: "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN.",
-    //        permissions: "*"
-    //    }]
-    //},
-
-    // To password protect the node-defined HTTP endpoints (httpNodeRoot), or
-    // the static content (httpStatic), the following properties can be used.
-    // The pass field is a bcrypt hash of the password.
-    // See http://nodered.org/docs/security.html#generating-the-password-hash
-    //httpNodeAuth: {user:"user",pass:"$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN."},
-    //httpStaticAuth: {user:"user",pass:"$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN."},
-
-    // The following property can be used to enable HTTPS
-    // See http://nodejs.org/api/https.html#https_https_createserver_options_requestlistener
-    // for details on its contents.
-    // See the comment at the top of this file on how to load the `fs` module used by
-    // this setting.
-    //
     //https: {
     //    key: fs.readFileSync('privatekey.pem'),
     //    cert: fs.readFileSync('certificate.pem')
@@ -145,31 +116,26 @@ var settings = module.exports = {
     // can be accessed in a function block as:
     //    context.global.os
     functionGlobalContext: {
-        wnr : require("../usr/src/node-red/node_modules/winknodered")
-	    ,CRYPTO: require("crypto")
-	    ,SunCalc : require("../usr/src/node-red/node_modules/suncalc")
-	    ,tinycolor : require("../usr/src/node-red/node_modules/tinycolor2")
-	    ,WinkUser: {"uid":"XXX","pwd":"XXX"}
-	  ,BlueMixUrlBase: "XXX" // put http://your_rpi_ip:1880 
-	  ,forecastIoApiKey: "5XXX"
-	  ,FREEBOARD_TOKEN: "XXX"
-	  ,IFTTT_TOKEN: "XXX"
-	  ,HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"}
-    	  ,VCAP_SERVICES: { "cloudantNoSQLDB":
+	env: process.env
+        ,wnr : require("winknodered")
+	,CRYPTO: require("crypto")
+	,SunCalc : require("suncalc")
+	,tinycolor : require("tinycolor2")
+	,WinkUser: {"uid":"XXX","pwd":"XXX"}
+	,BlueMixUrlBase: "XXX"
+	,forecastIoApiKey: "XXX"
+	,FREEBOARD_TOKEN: "XXX"
+	,IFTTT_TOKEN: "XXX"
+	,HomeLocation: { "lat":"XXX.XXX","lon":".XXX.XXX"}
+	,VCAP_SERVICES: 
+	  { "cloudantNoSQLDB":
             [
               {
-               "credentials": { "url":"http://wnr:wnr@XXX.XXX.XXX.XXX:5984" } //put your docker rpi ip address
+               "credentials": { "url":"http://wnr:wnr@couchdb:5984" } //put your docker rpi ip address
               }
             ]
-        }
-    },
-
-    // The following property can be used to order the categories in the editor
-    // palette. If a node's category is not in the list, the category will get
-    // added to the end of the palette.
-    // If not set, the following default order is used:
-    //paletteCategories: ['subflows', 'input', 'output', 'function', 'social', 'mobile', 'storage', 'analysis', 'advanced'],
-
+         }
+     },
     // Configure the logging output
     logging: {
         // Only console logging is currently supported
