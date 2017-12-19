@@ -197,14 +197,10 @@ if (NODE_RED_USERNAME && NODE_RED_PASSWORD) {
         users: function(username) {
             if (username == NODE_RED_USERNAME) {
                 return when.resolve({username:username,permissions:"*"});
-            } else {
-                return when.resolve({username:username,permissions:"*"});
             }
         },
         authenticate: function(username, password) {
             if (username==NODE_RED_USERNAME && password==NODE_RED_PASSWORD) {
-                return when.resolve({username:username,permissions:"*"});
-            } else {
                 return when.resolve({username:username,permissions:"*"});
             }
         }
