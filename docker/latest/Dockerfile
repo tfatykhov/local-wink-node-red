@@ -21,8 +21,10 @@ COPY package.json /usr/src/node-red/
 RUN npm install
 
 # make symlincs for wnrUI 2.0
-RUN cd node_modules/wnr-ui
+#RUN cd /usr/src/node-red/node_modules/wnr-ui
+WORKDIR /usr/src/node-red/node_modules/wnr-ui
 RUN ln -s ../../node_modules node_modules
+WORKDIR /usr/src/node-red
 
 # User configuration directory volume
 EXPOSE 1880

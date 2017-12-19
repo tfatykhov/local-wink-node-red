@@ -5,8 +5,8 @@ services:
     image: tfatykhov/rpi-influxdb:latest
     restart: always
     volumes:
-      - /home/pirate/influxdb/data:/data
-      - /home/pirate/influxdb/config:/etc/infuxdb
+      - $HOME/influxdb/data:/data
+      - $HOME/influxdb/config:/etc/infuxdb
     ports:
       - "8086:8086"
     environment:
@@ -22,8 +22,8 @@ services:
     links:
       - influxdb
     volumes:
-      - /home/pirate/grafana/log:/var/log/grafana
-      - /home/pirate/grafana/data:/var/lib/grafana
+      - $HOME/grafana/log:/var/log/grafana
+      - $HOME/grafana/data:/var/lib/grafana
       - /etc/localtime:/etc/localtime:ro
     ports:
       - "3000:3000"
@@ -31,3 +31,28 @@ services:
       # the login for the web-interface on port 3000 will be admin/secret
       GF_SECURITY_ADMIN_PASSWORD: 'grafana123'
       GF_INSTALL_PLUGINS: 'grafana-worldmap-panel,grafana-piechart-panel,briangann-gauge-panel,natel-discrete-panel,natel-influx-admin-panel,briangann-datatable-panel'
+  wnrcouchdb:
+    image: rpidocker/rpi-couchdb
+    restart: always
+    volumes:
+      - $HOME/couchDB:/opt/couchdb/data
+    ports:
+      - "5984:5984"
+    environment:
+      COUCHDB_USER: 'wnr'
+      COUCHDB_PASSWORD: 'wnr'
+
+  winkNodeRed:
+    image: tfatykhov/winknodered:rpi
+    restart: always
+    volumes:
+      - $HOME/flows:/flows
+      - $HOME/settings:/settings
+    ports:
+      - "1880:880"
+    depends_on:
+      - influxdb
+      - wnrcouchdb
+    links:
+      - influxdb
+      - wnrcouchdb
