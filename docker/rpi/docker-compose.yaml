@@ -28,7 +28,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      # the login for the web-interface on port 3000 will be admin/secret
+      # the login for the web-interface on port 3000 will be admin/grafana123 - unless you change next line
       GF_SECURITY_ADMIN_PASSWORD: 'grafana123'
       GF_INSTALL_PLUGINS: 'grafana-worldmap-panel,grafana-piechart-panel,briangann-gauge-panel,natel-discrete-panel,natel-influx-admin-panel,briangann-datatable-panel'
   wnrcouchdb:
