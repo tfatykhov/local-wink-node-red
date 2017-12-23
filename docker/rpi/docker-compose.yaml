@@ -49,7 +49,7 @@ services:
       - $HOME/flows:/flows
       - $HOME/settings:/settings
     ports:
-      - "1880:880"
+      - "1880:1880"
     depends_on:
       - influxdb
       - wnrcouchdb
