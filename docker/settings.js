@@ -2,6 +2,7 @@
 this is modified settings.js file for WNR docker container image
  **/
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 var fs = require("fs");
 var path = require("path");
 var NODE_RED_USERNAME="XXXXX";
